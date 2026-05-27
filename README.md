@@ -25,8 +25,8 @@ Sysadmins handling user onboarding in a Windows/Active Directory environment.
 - Home folder share must exist: \\DC01\Shares\Home\ — update to match your environment
 
 ## Usage
-```
-powershell# Batch import from CSV
+```powershell
+# Batch import from CSV
 Import-Csv .\newusers.csv | New-User
 
 # Single user
@@ -34,7 +34,8 @@ New-User -GivenName "John" -SurName "Doe" -SamAccountName "jdoe"
 
 # With explicit credentials
 Import-Csv .\newusers.csv | New-User -Credential $cred
-CSV format:
+
+# CSV format:
 GivenName,SurName,SamAccountName
 John,Doe,jdoe
 Jane,Smith,jsmith
